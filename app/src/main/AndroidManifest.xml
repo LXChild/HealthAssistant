@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lxchild.healthassistant" >
+
+    <uses-permission android:name="android.media.action.STILL_IMAGE_CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.lxchild.appstart.SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.DesignDemo" />
+        <activity
+            android:name="com.example.lxchild.appstart.SignInActivity"
+            android:label="SignIn"
+            android:theme="@style/Theme.DesignDemo" />
+        <activity
+            android:name="com.example.lxchild.appstart.RegisterActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity android:name="com.example.lxchild.result.ResultActivity"
+            android:label="@string/title_activity_result"/>
+    </application>
+
+</manifest>

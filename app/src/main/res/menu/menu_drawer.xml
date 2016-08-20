@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:checkable="true"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_messages"
+            android:checkable="true"
+            android:icon="@drawable/ic_event"
+            android:title="Messages" />
+        <item
+            android:id="@+id/nav_friends"
+            android:checkable="true"
+            android:icon="@drawable/ic_headset"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_doctor"
+            android:checkable="true"
+            android:icon="@drawable/ic_forum"
+            android:title="Doctors" />
+    </group>
+
+    <item android:title="Sub items">
+        <menu>
+            <item
+                android:id="@+id/nav_feedback"
+                android:checkable="true"
+                android:icon="@drawable/ic_dashboard"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/nav_exit"
+                android:checkable="true"
+                android:icon="@drawable/ic_forum"
+                android:title="Exit" />
+        </menu>
+    </item>
+
+</menu>

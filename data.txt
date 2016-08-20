@@ -1,0 +1,95 @@
+commit abeb3c7277a3f87d6087464f5297edf9989cbbbf
+Author: WangChong <lxchild@foxmail.com>
+Date:   Mon May 30 17:51:12 2016 +0800
+
+    ss
+
+ .gitignore                                         |    1 +
+ .gradle/2.2.1/taskArtifacts/cache.properties       |    1 +
+ .gradle/2.2.1/taskArtifacts/cache.properties.lock  |  Bin 0 -> 17 bytes
+ .gradle/2.2.1/taskArtifacts/fileHashes.bin         |  Bin 0 -> 95827 bytes
+ .gradle/2.2.1/taskArtifacts/fileSnapshots.bin      |  Bin 0 -> 1848820 bytes
+ .gradle/2.2.1/taskArtifacts/outputFileStates.bin   |  Bin 0 -> 19682 bytes
+ .gradle/2.2.1/taskArtifacts/taskArtifacts.bin      |  Bin 0 -> 57758 bytes
+ .gradle/2.4/taskArtifacts/cache.properties         |    1 +
+ .gradle/2.4/taskArtifacts/cache.properties.lock    |  Bin 0 -> 17 bytes
+ .gradle/2.4/taskArtifacts/fileHashes.bin           |  Bin 0 -> 147064 bytes
+ .gradle/2.4/taskArtifacts/fileSnapshots.bin        |  Bin 0 -> 1054783 bytes
+ .gradle/2.4/taskArtifacts/outputFileStates.bin     |  Bin 0 -> 19832 bytes
+ .gradle/2.4/taskArtifacts/taskArtifacts.bin        |  Bin 0 -> 64185 bytes
+ .idea/.name                                        |    1 +
+ .idea/compiler.xml                                 |   22 +
+ .idea/copyright/profiles_settings.xml              |    3 +
+ .idea/gradle.xml                                   |   19 +
+ .idea/inspectionProfiles/Project_Default.xml       |   25 +
+ .idea/inspectionProfiles/profiles_settings.xml     |    7 +
+ .idea/libraries/appcompat_v7_23_0_1.xml            |   15 +
+ .idea/libraries/design_23_0_1.xml                  |   13 +
+ .idea/libraries/faceppsdk.xml                      |    9 +
+ .idea/libraries/support_annotations_23_0_1.xml     |   11 +
+ .idea/libraries/support_v4_23_0_1.xml              |   16 +
+ .idea/misc.xml                                     |   46 +
+ .idea/modules.xml                                  |    9 +
+ .idea/runConfigurations.xml                        |   12 +
+ .idea/vcs.xml                                      |    6 +
+ .idea/workspace.xml                                | 2423 ++++++++++++++++++++
+ HealthAssistant.iml                                |   19 +
+ README                                             |    1 +
+ app/.gitignore                                     |    1 +
+ app/app.iml                                        |  100 +
+ app/build.gradle                                   |   26 +
+ app/libs/faceppsdk.jar                             |  Bin 0 -> 458259 bytes
+ app/proguard-rules.pro                             |   17 +
+ .../lxchild/healthassistant/ApplicationTest.java   |   13 +
+ app/src/main/AndroidManifest.xml                   |   39 +
+ .../example/lxchild/appstart/RegisterActivity.java |   39 +
+ .../example/lxchild/appstart/SignInActivity.java   |  117 +
+ .../example/lxchild/appstart/SplashActivity.java   |   94 +
+ .../lxchild/healthassistant/DetectTask.java        |   76 +
+ .../lxchild/healthassistant/MainActivity.java      |  410 ++++
+ .../com/example/lxchild/result/ResultActivity.java |   84 +
+ .../main/java/com/example/lxchild/util/MyUtil.java |   25 +
+ .../com/example/lxchild/util/mColorDetect.java     |   53 +
+ .../java/com/example/lxchild/util/mFaceDetect.java |  177 ++
+ app/src/main/res/drawable/ic_dashboard.png         |  Bin 0 -> 146 bytes
+ app/src/main/res/drawable/ic_discuss.png           |  Bin 0 -> 188 bytes
+ app/src/main/res/drawable/ic_done.png              |  Bin 0 -> 248 bytes
+ app/src/main/res/drawable/ic_event.png             |  Bin 0 -> 160 bytes
+ app/src/main/res/drawable/ic_forum.png             |  Bin 0 -> 217 bytes
+ app/src/main/res/drawable/ic_headset.png           |  Bin 0 -> 410 bytes
+ app/src/main/res/drawable/ic_menu.png              |  Bin 0 -> 116 bytes
+ app/src/main/res/drawable/icon_dark_save.png       |  Bin 0 -> 559 bytes
+ app/src/main/res/drawable/icon_light_save.png      |  Bin 0 -> 652 bytes
+ app/src/main/res/drawable/music_36px.png           |  Bin 0 -> 761 bytes
+ app/src/main/res/drawable/music_36px_light.png     |  Bin 0 -> 771 bytes
+ app/src/main/res/layout/activity_register.xml      |   16 +
+ app/src/main/res/layout/activity_reuslt.xml        |   15 +
+ app/src/main/res/layout/activity_signin.xml        |   46 +
+ app/src/main/res/layout/activity_splash.xml        |   17 +
+ app/src/main/res/layout/header_just_username.xml   |   35 +
+ app/src/main/res/layout/layout_dialog.xml          |   18 +
+ app/src/main/res/layout/navigation_drawer.xml      |   68 +
+ app/src/main/res/menu/menu_drawer.xml              |   42 +
+ app/src/main/res/menu/menu_register.xml            |    7 +
+ app/src/main/res/menu/menu_splash.xml              |    7 +
+ app/src/main/res/mipmap-hdpi/ic_launcher.png       |  Bin 0 -> 3418 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher.png       |  Bin 0 -> 2206 bytes
+ app/src/main/res/mipmap-xhdpi/ic_launcher.png      |  Bin 0 -> 4842 bytes
+ app/src/main/res/mipmap-xxhdpi/ic_launcher.png     |  Bin 0 -> 7718 bytes
+ app/src/main/res/values-v21/styles.xml             |    5 +
+ app/src/main/res/values-w820dp/dimens.xml          |    6 +
+ app/src/main/res/values/color.xml                  |    7 +
+ app/src/main/res/values/dimens.xml                 |    5 +
+ app/src/main/res/values/strings.xml                |   11 +
+ app/src/main/res/values/styles.xml                 |   18 +
+ build.gradle                                       |   19 +
+ build/intermediates/dex-cache/cache.xml            |   54 +
+ build/intermediates/gradle_project_sync_data.bin   |  Bin 0 -> 586 bytes
+ gradle.properties                                  |   18 +
+ gradle/wrapper/gradle-wrapper.jar                  |  Bin 0 -> 49896 bytes
+ gradle/wrapper/gradle-wrapper.properties           |    6 +
+ gradlew                                            |  164 ++
+ gradlew.bat                                        |   90 +
+ local.properties                                   |   11 +
+ settings.gradle                                    |    1 +
+ 88 files changed, 4617 insertions(+)
